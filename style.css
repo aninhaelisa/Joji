@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t-1{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.t-1 img{
+     max-width: 30px;
+     max-height: 30px;
+     margin: 10px;
+     transition: 0.30s;
+}
+
+.t-1 img:hover{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.t-1 h2{
+    font-family: 'Diphylleia', serif;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+    transition: 1s;
+}
+
+.t-1 h2:hover{
+    color: black;
+}
+
+.t-2{
+    max-width: 900px;
+    max-height: 500px;
+    border-radius: 10px;
+    background-color: #00000000;
+    padding: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+.t-2{
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Diphylleia', serif;
+
+}
+
+.p1{
+    font-size: 20px;
+    color: #ffffcc;
+    text-shadow: 0 0 5px #fff, 
+                   0 0 10px #fff, 
+                   0 0 20px rgb(125 9 17), 
+                   0 0 30px rgb(227 65 72), 
+                   0 0 40px rgb(209 9 9), 
+                   0 0 55px rgb(137 0 0), 
+                   0 0 70px rgb(247 0 0);
+}
+
+.p2{
+    font-size: 20px;
+    color: #ffffcc;
+    text-shadow: 0 0 5px #fff, 
+                   0 0 10px #fff, 
+                   0 0 20px rgb(12, 72, 202), 
+                   0 0 30px rgb(11, 12, 124), 
+                   0 0 40px rgb(22, 30, 134), 
+                   0 0 55px rgb(21, 53, 235), 
+                   0 0 70px rgb(0, 58, 247);
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 2px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(7, 2, 2);           
+    border: 3px solid rgb(49, 49, 49); 
+  }
+
+
+
+  .carrosel-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    overflow:hidden;
+    flex-direction: column;
+    width:100%;
+    
+  
+  }
+  .carrosel-container{
+    perspective: 300px;
+    width:200px;
+    height:300px;
+    position:relative;
+    border-radius:5px;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .carrosel-container .carrosel-slider .img-item{
+    width:100%;
+    height:100%;
+    border-radius:5px;
+
+  }
+  
+  .carrosel-container .carrosel-slider{
+    display:flex;
+    transition:all .5s ;
+  }
+  .carrosel__btn--style{
+    width:2rem;
+    height:2rem;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+     background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+  top:40%;
+  }
+  .prev{ 
+    left:0%;
+    background:url(https://cdn-icons-png.flaticon.com/512/5337/5337043.png);
+   }
+  .next{
+    background:url(https://cdn-icons-png.flaticon.com/512/5337/5337043.png);
+    right:0%
+  }
+  
+  .effect_next{
+    animation:effect_next .4s 1;
+  }
+  @keyframes effect_next{
+    0%{
+      ransform: rotateY(0);
+    }
+    50%{
+      transform: rotateY(10deg);
+    }
+    100%{
+      transform: rotateY(0);
+    }
+  }
+  .effect_prev{
+    animation:effect_prev .4s 1;
+  }
+  @keyframes effect_prev{
+    0%{
+      ransform: rotateY(0);
+    }
+    50%{
+      transform: rotateY(-10deg);
+    }
+    100%{
+      transform: rotateY(0deg);
+    }
+  }
+  
+  .circle-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:10rem;
+    margin-top:3%;
+    transition: all .5s;
+  }
+  .circle-container .circle-item{
+    width:1rem;
+    height:1rem;
+    border:1px solid rgba(8, 4, 4, 0.384);
+    border-radius:50%;
+    transition: all .5s;
+    box-shadow:1px 1px 1px ;
+    cursor:pointer;
+   
+  }
